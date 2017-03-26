@@ -1,32 +1,45 @@
-var gulp = require("gulp"); 
-var less = require("gulp-less");
-var plumber = require("gulp-plumber");
-var server = require("browser-sync");
+var gulp = require("gulp"),
+    less = require("gulp-less"),
+    browserSync = require("browser-sync"),
+    cssnano = require("gulp-cssnano"),
+    concat = require("gulp-concat"),
+    uglify = require("gulp-uglifyjs"),
+    rename = require("gulp-rename"),
+    autoprefixer = require("gulp-autoprefixer"),
+    plumber = require("gulp-plumber"),
+    gutil = require("gulp-util");
 
-
-gulp.task('style', function () {
-	gulp.src("less/style.less")
-	.pipe(plumber())
-	.pipe(less())
-	.pipe(postcss([
-	autoprefixer ({browsers: [
-		"last 1 version",
-		"last 2 Chrome versions",
-		"last 2 Firefox versions",
-		"last 2 Opera versions",
-		"last 2 Edge versions"
-	 ]})
-	]))
-	.pipe(gulp.dest("css"))
-	.pipe(server.reload({stream: true}));
+gulp.task("less", function() {
+  return gulp.src("less/style.less")
+  .pipe(plumber(function (error) {
+    gutil.log(error.message);
+    this.emit('end');
+}))
+  .pipe(less())
+  .pipe(autoprefixer(["last 10 versions", "> 1%", "ie 8", "ie 7"], {cascade: true}))
+  .pipe(gulp.dest("css"))
+  .pipe(browserSync.reload({stream: true}))
 });
 
-gulp.task("serve", ["style"], function(){
-	server.init({
-		server: "." 
-	})
-	gulp.watch("less/**/*.less", ["style"]);
-	gulp.watch("*.html")
-	.on("change", server.reload);
+gulp.task("cssmin", ["less"], function() {
+  gulp.src("css/style.css")
+  .pipe(cssnano())
+  .pipe(rename({suffix: ".min"}))
+  .pipe(gulp.dest("css"))
+  .pipe(browserSync.reload({stream: true}))
 });
 
+gulp.task("browser-sync", function() {
+  browserSync({
+    server: {
+      baseDir: "../Barbershop-Borodinski"
+    },
+    notify: false
+  });
+});
+
+gulp.task("watch", ["browser-sync", "cssmin"], function() {
+  gulp.watch("less/**/*.less", ["cssmin"]);
+  gulp.watch("*.html", browserSync.reload);
+  gulp.watch("js/**/*.js", browserSync.reload);
+});
