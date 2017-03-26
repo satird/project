@@ -1,2 +1,22 @@
 /* LESS Document */
+.clearfix(){
+  &::after{
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
 
+
+.container(){
+  width: 320px;
+  margin: 0 auto;
+
+  @media @tablet-width{
+    width: 640px;
+  }
+
+  @media @destkop-width{
+    width: 960px;
+  }
+}
