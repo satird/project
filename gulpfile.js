@@ -32,7 +32,7 @@ gulp.task("cssmin", ["less"], function() {
 gulp.task("browser-sync", function() {
   browserSync({
     server: {
-      baseDir: "../Barbershop-Borodinski"
+      baseDir: "../project"
     },
     notify: false
   });
