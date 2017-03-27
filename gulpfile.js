@@ -43,3 +43,5 @@ gulp.task("watch", ["browser-sync", "cssmin"], function() {
   gulp.watch("*.html", browserSync.reload);
   gulp.watch("js/**/*.js", browserSync.reload);
 });
+
+gulp.task("default", ["watch", "browser-sync", "cssmin", "less"]);
