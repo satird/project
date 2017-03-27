@@ -1,0 +1,77 @@
+.header {
+	background: @bg-lightgrey;
+}
+.header__logo a {
+	position:relative;
+	font-family: "Arial", sans-serif;
+	text-transform: uppercase;
+	text-align: center;
+	line-height: @baseLH;
+	font-size: @baseH1;
+	font-weight: 700;
+	text-transform: uppercase;
+	text-decoration: none;
+	line-height: @baseLH1;
+	display: block;
+	float: none;
+	color: #2f1a36;
+	margin: auto;
+	left: auto;
+	top: auto;
+	padding-bottom: 20px;	
+	padding-top: 20px;
+}
+.header__menu {
+	font-family: "Arial", sans-serif;
+	font-size: @baseFS;
+	display: block;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #2f1a36;
+	font-weight: 700;
+	line-height: @baseLH;
+}
+.header__main {
+	padding: 0;
+	margin: auto;
+	position: relative;
+	top: auto;
+	right: auto;	
+	height: 300px;
+	text-align: center;
+}
+.header__menu-hamburger{
+	padding: 0 100vw 35px;
+}
+.header__menu-hamburger:hover{
+	background: @hover-bg;
+	border-right: 2px solid #DCDCDC;
+}
+.header__menu-hamburger:before {
+  content: "";
+  position: absolute;
+  left: 48%;
+  top: 210px;
+  width: 1em;
+  height: 0.15em;
+  background: #000;
+  box-shadow: 
+    0 0.25em 0 0 black,
+    0 0.5em 0 0 black;
+}
+.header__navigation {
+	display: block;
+	float: none;
+	margin: auto;
+	vertical-align: auto;
+}
+.header__menu-btn {
+	padding: 10px;
+}
+.header__menu-btn:hover {
+	background: @hover-bg;
+	border-right: 2px solid #DCDCDC;
+}
+.header__active {
+	border-right: 4px solid #2f1a36;	
+}
