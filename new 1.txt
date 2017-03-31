@@ -1,11 +1,11 @@
 var gulp = require("gulp"),
     less = require("gulp-less"),
-    server = require("browser-sync"),
+    browser-sync = require("browser-sync"),
     cssnano = require("gulp-cssnano"),
     concat = require("gulp-concat"),
     uglify = require("gulp-uglifyjs"),
     rename = require("gulp-rename"),
-    autoprefixer = require("autoprefixer"),
+    autoprefixer = require("gulp-autoprefixer"),
     plumber = require("gulp-plumber"),
     gutil = require("gulp-util"),
 	minify = require("gulp-csso"),
@@ -19,13 +19,13 @@ var gulp = require("gulp"),
 	
 	
 gulp.task("less", function() {
-    gulp.src("src/less/style.less")
+    gulp.src("less/style.less")
 	.pipe(plumber(function (error) {
-	 gutil.log(error.message);
-	 this.emit('end');
+		gutil.log(error.message);
+		this.emit('end');
 }))
-   .pipe(less())
-   .pipe(postcss([
+  .pipe(less())
+  .pipe(postcss([
   autoprefixer({browsers: [
   "last 1 version",
   "last 2 Chrome versions",
@@ -41,34 +41,34 @@ gulp.task("less", function() {
   .pipe(cssnano())
   .pipe(rename({suffix: ".min"}))
   .pipe(gulp.dest("build/css"))
-  .pipe(server.reload({stream: true}))
+  .pipe(browserSync.reload({stream: true}))
 });
 
 gulp.task("images", function() {
-	return gulp.src("build/src/img/**/*.{png,jpg,gif}")
+	return gulp.src("*build/img/**/*.{png,jpg,gif}")
 	.pipe(imagemin([
 	imagemin.optipng({optimizationLevel: 3}),
 	imagemin.jpegtran({progressive: true})
 	]))
-	.pipe(gulp.dest("build/img"));
+	.pipe(gulp.dest("*build/img"));
 });
 
 gulp.task("symbols", function() {
-	return gulp.src("build/src/img/icons/*.svg")
+	return gulp.src("*build/img/icons/*.svg")
 		.pipe(svgmin())
 		.pipe(svgstore({
 			inlineSvg: true
 		})) 
-		.pipe(rename("symbols.svg"))
+		.pipe(rename(symbols.svg"))
 		.pipe(gulp.dest("build/img"));
 });
 
 gulp.task("copy", function() {
 	return gulp.src([
 		"fonts/**/*.{woff,woff2}",
-		"src/img/**/*",
+		"img/**",
 		"js/**",
-		"*.html",
+		"*.html"
 	], {
 		base: "."
 		})
@@ -79,19 +79,19 @@ gulp.task("clean", function() {
 	return del("build");
 });
 
-gulp.task("serve", function() {
-  server({
+gulp.task("browser-sync", function() {
+  browserSync({
     server: {
-		baseDir: "build"  
-	},
-	notify: false
+      baseDir: "../project"
+    },
+    notify: false
   });
 });
 
-gulp.task("watch", ["serve"], function() {
-  gulp.watch("src/less/**/*.less", ["less"]);
-  gulp.watch("*.html", server.reload);
-  gulp.watch("js/**/*.js", server.reload);
+gulp.task("watch", ["browser-sync"], function() {
+  gulp.watch("less/**/*.less");
+  gulp.watch("*.html", browserSync.reload);
+  gulp.watch("js/**/*.js", browserSync.reload);
 });
 
 gulp.task("build", function(fn) {
@@ -101,9 +101,6 @@ gulp.task("build", function(fn) {
 	"less",
 	"images",
 	"symbols",
-	"watch",
 	fn
 	);
 });
-
-gulp.task("default", ["build"], function() {});
