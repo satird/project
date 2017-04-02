@@ -20,4 +20,245 @@
       -ms-filter: blur(5px);
           filter: blur(5px);
 }
+@media all and (min-width: 640px) {
+
+	.gallery__main {
+	display: inline-block;
+	position: relative;
+	overflow: auto;
+	padding: 30px;
+	margin: 0px;
+	margin-left: 0;
+	margin-top: 10px;
+	z-index: 1;
+	height: auto;
+	width: auto;
+	top: 0;
+	right: 0;
+}
+
+.gallery__col {
+	position: relative;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	padding-right: 20px;
+	padding-top: 20px;
+}
+.gallery__img img {
+	width: 190px;
+	height: 190px;
+	background-color: #fff;
+}
+
+.gallery__img:hover {
+	opacity: 0.4;
+	-webkit-filter: blur(5px);
+     -moz-filter: blur(5px);
+       -o-filter: blur(5px);
+      -ms-filter: blur(5px);
+          filter: blur(5px);
+}
+
+.gallery__img:focus img{
+    position: relative;  
+    height:300px;
+	width: 300px;
+    cursor: pointer; 
+  
+    -webkit-transition:All 1s ease;
+    -moz-transition:All 1s ease;
+    -o-transition:All 1s ease;
+    transition: all 1.0s ease;
+   
+    -webkit-box-shadow: 0px 4px 4px 1px #DFDFDF;
+    -moz-box-shadow: 0px 4px 4px 1px #DFDFDF;
+    box-shadow: 0px 4px 4px 1px #DFDFDF; 
+}
+}
 	
+ @media all and (min-width: 960px) {
+
+ .gallery__main {
+	overflow: auto;
+	padding: 0px;
+	margin-top: 0px;
+	height: 420px;
+	width: 640px;
+	left: 560px;
+}
+
+.gallery__col {
+	position: relative;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	padding-right: 20px;
+	padding-top: 20px;
+}
+
+
+.gallery__img img {
+	width: 190px;
+	height: 190px;
+	background-color: #fff;
+}
+
+.gallery__img:hover {
+	opacity: 0.4;
+	-webkit-filter: blur(5px);
+     -moz-filter: blur(5px);
+       -o-filter: blur(5px);
+      -ms-filter: blur(5px);
+          filter: blur(5px);
+}
+
+.gallery__img:focus img{
+    position: relative;  
+    height:300px;
+	width: 300px;
+    cursor: pointer; 
+  
+    -webkit-transition:All 1s ease;
+    -moz-transition:All 1s ease;
+    -o-transition:All 1s ease;
+    transition: all 1.0s ease;
+   
+    -webkit-box-shadow: 0px 4px 4px 1px #DFDFDF;
+    -moz-box-shadow: 0px 4px 4px 1px #DFDFDF;
+    box-shadow: 0px 4px 4px 1px #DFDFDF; 
+}
+
+.gallery__arrow-top:before,
+  .gallery__arrow-top:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent; 
+    border-top: 0;
+    }
+	
+.gallery__arrow-top {
+	position: absolute;
+	top: 70px;
+	right: 51%;
+  	width: 8px;
+  	height: 20px;
+  	background: #2f1a36;  
+  }
+  
+  .gallery__arrow-top:after {
+    top: -18px;
+    right: -6px;
+    border-bottom-color: #2f1a36; 
+	border-width: 10px 10px 25px 10px;
+	z-index: 11; 
+    }
+
+
+
+.gallery__arrow-bottom:before,
+  .gallery__arrow-bottom:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent; 
+    border-bottom: 0;
+    }
+	
+.gallery__arrow-bottom {
+	position: absolute;
+	bottom: 60px;
+	right: 51%;
+  	width: 8px;
+ 	height: 25px;
+ 	background: #2f1a36;  
+  }
+  
+  .gallery__arrow-bottom:after {
+    top: 13px;
+    right: -6px;
+    border-top-color: #2f1a36; 
+	border-width: 25px 10px 10px 10px;
+	z-index: 11; 
+    }
+	
+	
+	
+  .gallery__arrow-left:before,
+  .gallery__arrow-left:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent; 
+    border-left: 0;
+    }
+	
+.gallery__arrow-left {
+	position: absolute;
+	left: 55px;
+	top: 49%;
+    width: 20px;
+    height: 8px;
+    background: #2f1a36;  
+  }
+  
+  .gallery__arrow-left:after {
+    top: -6px;
+    right: 15px;
+    border-right-color: #2f1a36; 
+	border-width: 10px 25px 10px 10px;
+	z-index: 11; 
+    }
+	
+	
+	.gallery__arrow-right:before,
+  .gallery__arrow-right:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent; 
+    border-right: 0;
+    }
+	
+.gallery__arrow-right {
+	position: absolute;
+	right: 70px;
+	top: 49%;
+    width: 20px;
+    height: 8px;
+    background: #2f1a36;  
+  }
+  
+  .gallery__arrow-right:after {
+    top: -6px;
+    right: -20px;
+    border-left-color: #2f1a36; 
+	border-width: 10px 25px 10px 25px;
+	z-index: 11; 
+    }
+	
+	.gallery__arrow {
+	 visibility: hidden;
+	 -webkit-transition: .4s ease-out;
+     -webkit-transition-delay: 0.5s;
+     -o-transition: .4s ease-out;
+     -o-transition-delay: 0.5s;
+     -moz-transition: .4s ease-out;
+     -moz-transition-delay: 0.5s;
+     transition: .4s ease-out;
+     transition-delay: 0.5s;	 
+	}
+	
+	.gallery__col:hover .gallery__arrow{
+		visibility: visible;
+	}
+	}

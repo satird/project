@@ -12,11 +12,28 @@
   width: 320px;
   margin: 0 auto;
 
-  @media @tablet-width{
+  @media all and (min-width: 640px){
     width: 640px;
   }
 
-  @media @destkop-width{
+  @media all and (min-width: 960px){
     width: 960px;
   }
 }
+
+@media all and (min-width: 960px) {
+  .gallery {
+  background: #fff url(../img/bg.png) no-repeat left top;
+  background-size: contain;
+  background-attachment: fixed;
+  position: fixed;
+ }
+  .top-text {
+    color: #fff;
+  }
+  .underline-text  {
+    color: #fff;
+  }
+}
+
+ 
