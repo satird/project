@@ -1,290 +1,325 @@
-.header {
-	background: @bg-lightgrey;
-}
-.header__logo a {
-	position:relative;
-	font-family: "Arial", sans-serif;
-	text-transform: uppercase;
-	text-align: center;
-	line-height: @baseLH;
-	font-size: @baseH1;
-	font-weight: 700;
-	text-transform: uppercase;
-	text-decoration: none;
-	line-height: @baseLH1;
-	display: block;
-	float: none;
-	color: #2f1a36;
-	margin: auto;
-	left: auto;
-	top: auto;
-	padding-bottom: 20px;	
-	padding-top: 20px;
-}
-.header__menu {
-	font-family: "Arial", sans-serif;
-	font-size: @baseFS;
-	display: block;
-	text-transform: uppercase;
-	text-decoration: none;
-	color: #2f1a36;
-	font-weight: 700;
-	line-height: @baseLH;
-}
-.header__main {
-	padding: 0;
-	margin: auto;
-	position: relative;
-	top: auto;
-	right: auto;	
-	height: 300px;
-	text-align: center;
-}
-.header__menu-hamburger{
-	padding: 0 100vw 35px;
-}
-.header__menu-hamburger:hover{
-	background: @hover-bg;
-	border-right: 2px solid #DCDCDC;
-}
-.header__menu-hamburger:before {
-  content: "";
-  position: absolute;
-  left: 48%;
-  top: 210px;
-  width: 1em;
-  height: 0.15em;
-  background: #000;
-  box-shadow: 
-    0 0.25em 0 0 black,
-    0 0.5em 0 0 black;
-}
-.header__navigation {
-	display: block;
-	float: none;
-	margin: auto;
-	vertical-align: auto;
-}
-.header__menu-btn {
-	padding: 10px;
-}
-.header__menu-btn:hover {
-	background: @hover-bg;
-	border-right: 2px solid #DCDCDC;
-}
-.header__active {
-	border-right: 4px solid #2f1a36;	
-}
-
-
- @media all and (min-width: 640px) { 
-.header{
-	background: @bg-lightgrey;
-}
-
-.top-text {
-	font-size: 36px;
-}
-
-.underline-text {
-	font-size: 24px;
-}
-
-.test {
-	background: #fff;
-	background-size: contain;
-	background-attachment: fixed;	
-}
-
-.header__main {
-	height: 100px;
-}
-
-.header__navigation {
-	display: inline-block;
-}
-
-.header__menu-btn {
-	padding-top: 14px;
-	padding-bottom: 14px;
-	padding-right: 25px;
-	padding-left: 25px;
-}
-.header__menu-hamburger{
-	display: inline-block;
-	position: relative;
-    left: 0px;
-	top: 0px;
-	padding-bottom: 0px;
-	padding-left: 25px;
-	padding-right: 30px;
-	padding-top: 10px;
-	height: 45px;
-	width: 45px;
-}
-
-.header__menu-hamburger:before {
-  content: "";
-  position: absolute;
-  left: 40px;
-  top: 20px;
-  width: 1em;
-  height: 0.15em;
-  background: #000;
-  box-shadow: 
-    0 0.25em 0 0 black,
-    0 0.5em 0 0 black;
-}
-
-.header__nav {
-	padding: 0;
-	margin-left: auto;
-	margin-right: auto;
-	height: 50px;
-	width: 640px;
-}
-.header__navigation {
-	display: inline-block;
-	float:left;
-}
-
-.header__navigation-menu {
-	position: relative;
-	display: block;
-	float: left;
-	width: 100px;
-	background: #fff;
-	height: 55px;
-	right: 0;
-}
-.header__menu-btn {
-	padding-top: 14px;
-	padding-bottom: 14px;
-	padding-right: 25px;
-	padding-left: 25px;
-  }
-}
-
-@media all and (min-width: 960px) {
-.header{
-	overflow-x: none;
-	padding: 0;
-	right: 0;
-	width: 960px;
-	position: fixed;
-	z-index: 10;
-}
-
-
-.header__main {
-	top: 0;
-	right: 0;
-	position: absolute;
-	font-family: "Arial", sans-serif;
-	text-transform: uppercase;
-	color: #2f1a36;
-	display: inline-block;
-	width: 830px;
-	margin: 0px;
-	padding: 0px;
-	padding-top: 40px;
-	background: #fff;
-}
-
-.header__nav {
-	padding: 0;
-	margin: 0;
-}
-
-
-.header__navigation {
-	display: inline-block;
-	margin: 0;
-	padding: 0;
-	vertical-align: top;
-	margin-right: 0px;
-	padding-right: 0px;
-	padding-right: 0px;
-	padding-top: 14px;
-	padding-bottom: 14px;
-}
-
-
-.header__menu {
-	font-family: "Arial", sans-serif;
-	font-size: 14px;
-	text-transform: uppercase;
-	text-decoration: none;
-	color: #2f1a36;
-	font-weight: 700;
-}
-.header__menu-btn {
-	padding-top: 14px;
-	padding-bottom: 14px;
-	padding-right: 25px;
-	padding-left: 25px;
-}
-
-.header__logo {
-	position: absolute;
-	top: 50px;
-	right: 980px;
-	margin-top: 0px;
-	font-family: "Arial", sans-serif;
-	text-transform: uppercase;
-	color: #fff;
-	line-height: 28px;
-	z-index: 20;
-}
-
-.header__menu-hamburger {
-  position: relative;
-  padding-left: 1.25em;
-}
-
-.header__menu-hamburger:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.25em;
-  width: 1em;
-  height: 0.15em;
-  background: #000;
-  box-shadow: 
-    0 0.25em 0 0 black,
-    0 0.5em 0 0 black;
-}
-
-.header__menu-hamburger{
-	display: inline-block;
-	position: relative;
-    left: 50px;
-	top: 10px;
-	padding-bottom: 0px;
-	padding-left: 20px;
-	padding-right: 20px;
-	padding-top: 10px;
-	height: 45px;
-	width: 45px;
-}
-.header__navigation-menu {
-	position: relative;
-	width: 100px;
-	background: #fff;
-	height: 55px;
-	right: 0;
-}
-
-.header__active {
-	border-right: 2px solid #2f1a36;	
-}
-
-.top-text {
-	font-size: 36px;
-}
-
-.underline-text {
-	font-size: 24px;
-}
+/*@media screen and (max-width: 728px) {*/
 	
+/*Эксперементируем с выдвигающим меню*/
+
+
+	.header__nav {
+		width: 320px;
+		max-width: 320px;
+		height: 100%;
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		margin: 0;
+		/* сдвигаем (прячем) панель относительно правого края страницы */
+	    right: -328px;
+	    /* внутренние отступы */
+	    padding: 15px 20px;
+	    /* плавный переход смещения панели */
+	    -webkit-transition: right 0.3s;
+	    -moz-transition: right 0.3s;
+	    transition: right 0.3s;
+	    /* определяем цвет фона панели */
+	    background: /*url(../img/bg-logo.jpg)*/#16a085;
+	    /* поверх других элементов */
+	    z-index: 2000;
+	}
+
+	/**
+ * Кнопка переключения панели
+ * тег <label>
+ */
+
+.nav-toggle {
+    /* абсолютно позиционируем */
+    position: absolute;
+    /* относительно правого края панели */
+    right: 344px; /*по умолчанию было 320px*/
+    /* отступ от верхнего края панели */
+    top: 1em;
+    width: 2em;
+    height: 2em;
+    /* внутренние отступы */
+    padding: 0.4em;
+    /* определяем цвет фона переключателя
+     * чаще вчего в соответствии с цветом фона панели
+    */
+    background: inherit;
+    /* цвет текста */
+    color: #dadada;
+    /* вид курсора */
+    cursor: pointer;
+    /* размер шрифта */
+    font-size: 1.2em;
+    line-height: 1;
+    /* всегда поверх других элементов страницы */
+    z-index: 2001;
+    /* анимируем цвет текста при наведении */
+    -webkit-transition: color .25s ease-in-out;
+    -moz-transition: color .25s ease-in-out;
+    transition: color .25s ease-in-out;
+
+    -moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+    border-radius: 50%; /*сделал круг*/
+    border: 1px solid #fff;
+
+}
+
+	/* определяем текст кнопки 
+ * символ Unicode (TRIGRAM FOR HEAVEN)
+*/
+
+.nav-toggle:after {
+    content: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjMycHgiIGhlaWdodD0iMzJweCIgdmlld0JveD0iMCAwIDEyNCAxMjQiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDEyNCAxMjQ7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGc+Cgk8cGF0aCBkPSJNMTEyLDZIMTJDNS40LDYsMCwxMS40LDAsMThzNS40LDEyLDEyLDEyaDEwMGM2LjYsMCwxMi01LjQsMTItMTJTMTE4LjYsNiwxMTIsNnoiIGZpbGw9IiNmNGY0ZjQiLz4KCTxwYXRoIGQ9Ik0xMTIsNTBIMTJDNS40LDUwLDAsNTUuNCwwLDYyYzAsNi42LDUuNCwxMiwxMiwxMmgxMDBjNi42LDAsMTItNS40LDEyLTEyQzEyNCw1NS40LDExOC42LDUwLDExMiw1MHoiIGZpbGw9IiNmNGY0ZjQiLz4KCTxwYXRoIGQ9Ik0xMTIsOTRIMTJjLTYuNiwwLTEyLDUuNC0xMiwxMnM1LjQsMTIsMTIsMTJoMTAwYzYuNiwwLDEyLTUuNCwxMi0xMlMxMTguNiw5NCwxMTIsOTR6IiBmaWxsPSIjZjRmNGY0Ii8+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==)/*'\2026'*/;/*\2630*/
+    text-decoration: none;
+}
+
+	/* цвет текста при наведении */
+
+.nav-toggle:hover {
+    color: #f4f4f4;
+}
+
+	/**
+ * Скрытый чекбокс (флажок)
+ * невидим и недоступен :)
+ * имя селектора атрибут флажка
+ */
+
+[id='nav-toggle'] {
+    position: absolute;
+    display: none;
+}
+
+	/**
+ * изменение положения переключателя 
+ * при просмотре на мобильных устройствах
+ * когда навигация раскрыта, распологаем внутри панели
+*/
+
+[id='nav-toggle']:checked ~ .header__nav > .nav-toggle {
+    left: auto;
+    right: 2px;
+    top: 1em;
+
+    border: none; /*убрал круг радиус*/
+}
+
+	/**
+ * Когда флажок установлен, открывается панель
+ * используем псевдокласс:checked
+ */
+
+[id='nav-toggle']:checked ~ .header__nav {
+    right: 0;
+    box-shadow:-4px 0px 20px 0px rgba(0,0,0, 0.5);
+    -moz-box-shadow:-4px 0px 20px 0px rgba(0,0,0, 0.5);
+    -webkit-box-shadow:-4px 0px 20px 0px rgba(0,0,0, 0.5);
+    overflow-y: auto;
+}
+
+	/*
+ * изменение символа переключателя,
+ * привычный крестик (MULTIPLICATION X), 
+ * вы можете испльзовать любой другой значок
+*/
+
+[id='nav-toggle']:checked ~ .header__nav > .nav-toggle:after {
+    content: '\2715';
+}
+
+	/**
+ * профиксим баг в Android <= 4.1.2
+ * см: http://timpietrusky.com/advanced-checkbox-hack
+ */
+body {
+    -webkit-animation: bugfix infinite 1s;
+}
+
+@-webkit-keyframes bugfix {
+    to {
+      padding: 0;
+    }
+}
+
+
+
+
+    /**
+ * формируем непосредственно само меню
+ * используем неупорядоченный список для пунктов меню
+ * прикрутим трансфомации и плавные переходы
+ */
+
+.header__nav > ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.header__nav > ul > li {
+    line-height: 2.5;
+    opacity: 0;
+    -webkit-transform: translateX(50%);
+    -moz-transform: translateX(50%);
+    -ms-transform: translateX(50%);
+    transform: translateX(50%);
+    -webkit-transition: opacity .5s .1s, -webkit-transform .5s .1s;
+    -moz-transition: opacity .5s .1s, -moz-transform .5s .1s;
+    -ms-transition: opacity .5s .1s, -ms-transform .5s .1s;
+    transition: opacity .5s .1s, transform .5s .1s;
+}
+
+[id='nav-toggle']:checked ~ .header__nav > ul > li {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+}
+
+/* определяем интервалы появления пунктов меню */
+
+.header__nav > ul > li:nth-child(2) {
+    -webkit-transition: opacity .5s .2s, -webkit-transform .5s .2s;
+    transition: opacity .5s .2s, transform .5s .2s;
+}
+
+.header__nav > ul > li:nth-child(3) {
+    -webkit-transition: opacity .5s .3s, -webkit-transform .5s .3s;
+    transition: opacity .5s .3s, transform .5s .3s;
+}
+
+.header__nav > ul > li:nth-child(4) {
+    -webkit-transition: opacity .5s .4s, -webkit-transform .5s .4s;
+    transition: opacity .5s .4s, transform .5s .4s;
+}
+
+.header__nav > ul > li:nth-child(5) {
+    -webkit-transition: opacity .5s .5s, -webkit-transform .5s .5s;
+    transition: opacity .5s .5s, transform .5s .5s;
+}
+
+.header__nav > ul > li:nth-child(6) {
+    -webkit-transition: opacity .5s .6s, -webkit-transform .5s .6s;
+    transition: opacity .5s .6s, transform .5s .6s;
+}
+
+.header__nav > ul > li:nth-child(7) {
+    -webkit-transition: opacity .5s .7s, -webkit-transform .5s .7s;
+    transition: opacity .5s .7s, transform .5s .7s;
+}
+
+/**
+ * оформление ссылок пунктов меню
+ */
+
+.header__nav > ul > li > a {
+    display: inline-block;
+    position: relative;
+    padding: 0;
+    font-family: 'Merriweather', serif;
+    font-weight: 400;
+    font-size: 1.2em;
+    color: #dadada;
+    width: 100%;
+    text-decoration: none;
+    /* плавный переход */
+    -webkit-transition: color .5s ease, padding .5s ease;
+    -moz-transition: color .5s ease, padding .5s ease;
+    transition: color .5s ease, padding .5s ease;
+}
+
+    /**
+ * состояние ссылок меню при наведении
+ */
+
+.header__nav > ul > li > a:hover,
+.header__nav > ul > li > a:focus {
+    color: white;
+    padding-left: 15px;
+}
+
+
+/**
+ * линия подчеркивания ссылок меню
+ */
+
+.header__nav > ul > li > a:before {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+    -webkit-transition: width 0s ease;
+    transition: width 0s ease;
+}
+
+.header__nav > ul > li > a:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+    background: #3bc1a0;
+    -webkit-transition: width .5s ease;
+    transition: width .5s ease;
+}
+
+
+/**
+ * анимируем линию подчеркивания 
+ * ссылок при наведении
+ */
+
+.header__nav > ul > li > a:hover:before {
+    width: 0%;
+    background: #3bc1a0;
+    -webkit-transition: width .5s ease;
+    transition: width .5s ease;
+}
+
+.header__nav > ul > li > a:hover:after {
+    width: 0%;
+    background: transparent;
+    -webkit-transition: width 0s ease;
+    transition: width 0s ease;
+}
+
+.news__content-jpg {
+    padding-bottom: 10px;
+    }
+
+
+}
+
+/**
+ * позаботьтимся о средних и маленьких экранах
+ * мобильных устройств
+ */
+
+@media screen and (min-width: 320px) {
+    html,
+    body {
+    /*  margin: 0;
+      overflow-x: hidden;*/
+    }
+}
+
+@media screen and (max-width: 320px) {
+    html,
+    body {
+      margin: 0;
+      overflow-x: hidden;
+    }
+    .header__nav {
+      width: 100%;
+      box-shadow: none
+    }
 }
